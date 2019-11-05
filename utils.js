@@ -1,11 +1,12 @@
-// abc.com?x=1&deep_link_url=xyz.com?a=1&b=1
-// {
-//   x: 1,
-//   deep_link_url: {
-//     a:1,
-//     b:1
-//   }
-// }
+/// this function provide nested query Object from the url
+/// like http://abc.com?x=1&deep_link_url=http://xyz.com?a=1&b=1
+/// return object {
+///   x:1,
+///   deep_link_url: {
+///     a: 1,
+///     b: 1
+///   }
+/// }
 
 function getQueryParams(url = '') {
   if (url.indexOf('?') < 1) {
